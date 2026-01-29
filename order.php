@@ -1,9 +1,9 @@
 
 <?php
 $host = "localhost";
-$user = "root";      
-$pass = "";          
-$db   = "RellaBites";
+$user = "admin";      
+$pass = "admin123";          
+$db   = "arellaDB";
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
@@ -34,7 +34,7 @@ if ($conn->query($sql) === TRUE) {
     if (mail($to, $subject, $message, $headers)) {
         echo "<script>alert('Pesanan berhasil dikirim!'); window.location.href='index.html';</script>";
     } else {
-        echo "<script>alert('Pesanan tersimpan, tapi email gagal terkirim.'); window.location.href='index.html';</script>";
+        echo "<script>alert('Pesanan tersimpan!'); window.location.href='index.html';</script>";
     }
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
@@ -42,3 +42,4 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
+
