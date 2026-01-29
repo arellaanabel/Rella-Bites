@@ -133,18 +133,18 @@
 
     <section id="order">
       <h2>Order Sekarang</h2>
-      <form onsubmit="alert('Terima kasih, pesanan Anda sudah diterima!'); return false;">
-        <input type="text" name="nama" placeholder="Nama Anda" required>
-        <input type="text" name="telepon" placeholder="Nomor Telepon" required>
-        <select name="menu" required>
-          <option value="">Pilih Menu</option>
-          <option value="ori">Cookies Original</option>
-          <option value="matcha">Cookies Matcha</option>
-          <option value="red">Cookies Red Velvet</option>
-        </select>
-        <textarea name="alamat" rows="3" placeholder="Alamat Pengantaran" required></textarea>
-        <button type="submit">Kirim Pesanan</button>
-      </form>
+      <form action="order.php" method="POST">
+  <input type="text" name="nama" placeholder="Nama Anda" required>
+  <input type="text" name="telepon" placeholder="Nomor Telepon" required>
+  <select name="menu" required>
+    <option value="">Pilih Menu</option>
+    <option value="Kopi Susu Gula Aren">Kopi Susu Gula Aren</option>
+    <option value="Cappuccino">Cappuccino</option>
+    <option value="Mocha">Mocha</option>
+  </select>
+  <textarea name="alamat" rows="3" placeholder="Alamat Pengantaran" required></textarea>
+  <button type="submit">Kirim Pesanan</button>
+</form>
     </section>
 
     <section id="kontak">
